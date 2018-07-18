@@ -82,6 +82,7 @@ class ImportService extends Service
                 return new CsvImport($this->dic, $this->fileImport, $this->importParams);
                 break;
             case 'text/xml':
+            case 'application/xml':
                 return new XmlImport($this->dic, new XmlFileImport($this->fileImport), $this->importParams);
                 break;
         }
